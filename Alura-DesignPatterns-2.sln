@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32825.248
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alura-DesignPatterns-2", "Alura-DesignPatterns-2\Alura-DesignPatterns-2.csproj", "{8BA74661-D926-42DF-AC45-67CDD0C35C5F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F71A1C64-5481-460F-A9F5-69177C70F5BD}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8BA74661-D926-42DF-AC45-67CDD0C35C5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BA74661-D926-42DF-AC45-67CDD0C35C5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BA74661-D926-42DF-AC45-67CDD0C35C5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BA74661-D926-42DF-AC45-67CDD0C35C5F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {59CDF52D-D3B2-4496-9E57-28EA5B0AA83D}
+	EndGlobalSection
+EndGlobal
