@@ -2,7 +2,7 @@
 {
     public interface IMensagem
     {
-        IEnviador Enviador{ get; set; }
+        IEnviador Enviador { get; set; }
 
         void Envia();
 

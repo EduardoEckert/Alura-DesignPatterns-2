@@ -5,10 +5,11 @@ using Alura_DesignPatterns_2.Atividade03;
 using Alura_DesignPatterns_2.Atividade04;
 using Alura_DesignPatterns_2.Atividade05;
 using Alura_DesignPatterns_2.Atividade06;
+using Alura_DesignPatterns_2.Atividade07;
 using System.Linq.Expressions;
 
 
-ExecutarAtividade(6);
+ExecutarAtividade(7);
 
 void ExecutarAtividade(int numAtividade)
 {
@@ -41,6 +42,11 @@ void ExecutarAtividade(int numAtividade)
         case 6:
             //Bridge
             Atividade06();
+            break;
+
+        case 7:
+            //Command
+            Atividade07();
             break;
 
         default:
@@ -113,10 +119,24 @@ void Atividade04_05()
     raizQuadrada.Aceita(impressora);
 }
 
-void Atividade06() 
+void Atividade06()
 {
     var mensagem = new MensagemCliente("Eduardo");
     var enviador = new EnviaPorSms();
     mensagem.Enviador = enviador;
     mensagem.Envia();
+}
+
+void Atividade07()
+{
+    var fila = new FilaDeTrabalho();
+    Pedido pedido1 = new Pedido("Carlos", 150);
+    Pedido pedido2 = new Pedido("Maria", 1000);
+
+    fila.Adiciona(new PagaPedido(pedido1));
+    fila.Adiciona(new PagaPedido(pedido2));
+
+    fila.Adiciona(new FinalizaPedido(pedido1));
+
+    fila.Processa();
 }

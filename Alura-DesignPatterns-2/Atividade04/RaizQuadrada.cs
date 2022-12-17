@@ -18,7 +18,7 @@ namespace Alura_DesignPatterns_2.Atividade04
 
         public void Aceita(IVisitor visitor)
         {
-           visitor.ImprimeRaizQuadrada(this);
+            visitor.ImprimeRaizQuadrada(this);
         }
     }
 }
