@@ -6,10 +6,10 @@ using Alura_DesignPatterns_2.Atividade04;
 using Alura_DesignPatterns_2.Atividade05;
 using Alura_DesignPatterns_2.Atividade06;
 using Alura_DesignPatterns_2.Atividade07;
+using Alura_DesignPatterns_2.Atividade08;
 using System.Linq.Expressions;
 
-
-ExecutarAtividade(7);
+ExecutarAtividade(8);
 
 void ExecutarAtividade(int numAtividade)
 {
@@ -47,6 +47,11 @@ void ExecutarAtividade(int numAtividade)
         case 7:
             //Command
             Atividade07();
+            break;
+
+        case 8:
+            //Adapter
+            Atividade08();
             break;
 
         default:
@@ -139,4 +144,16 @@ void Atividade07()
     fila.Adiciona(new FinalizaPedido(pedido1));
 
     fila.Processa();
+}
+
+void Atividade08()
+{
+    var cliente = new Cliente();
+    cliente.Nome = "Eduardo Eckert Sperfeld";
+    cliente.Endereco = "Terra";
+    cliente.DataNascimento = Convert.ToDateTime("07/03/2003");
+
+    var xml = new GeradorDeXml().GeraXml(cliente);
+
+    Console.WriteLine(xml);
 }
