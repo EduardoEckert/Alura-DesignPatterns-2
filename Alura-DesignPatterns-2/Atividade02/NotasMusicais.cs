@@ -13,7 +13,7 @@
             {"si", new Si() }
         };
 
-        public INota Pega(string nome) 
+        public INota Pega(string nome)
         {
             return notas[nome];
         }

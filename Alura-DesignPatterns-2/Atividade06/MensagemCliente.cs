@@ -10,7 +10,7 @@
             Nome = nome;
         }
 
-        public void Envia() 
+        public void Envia()
         {
             Enviador.Envia(this);
         }
