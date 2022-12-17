@@ -4,10 +4,11 @@ using Alura_DesignPatterns_2.Atividade02;
 using Alura_DesignPatterns_2.Atividade03;
 using Alura_DesignPatterns_2.Atividade04;
 using Alura_DesignPatterns_2.Atividade05;
+using Alura_DesignPatterns_2.Atividade06;
 using System.Linq.Expressions;
 
 
-//ExecutarAtividade(4);
+ExecutarAtividade(6);
 
 void ExecutarAtividade(int numAtividade)
 {
@@ -35,6 +36,11 @@ void ExecutarAtividade(int numAtividade)
         case 5:
             //Visitor
             Atividade04_05();
+            break;
+
+        case 6:
+            //Bridge
+            Atividade06();
             break;
 
         default:
@@ -105,4 +111,12 @@ void Atividade04_05()
 
     soma.Aceita(impressora);
     raizQuadrada.Aceita(impressora);
+}
+
+void Atividade06() 
+{
+    var mensagem = new MensagemCliente("Eduardo");
+    var enviador = new EnviaPorSms();
+    mensagem.Enviador = enviador;
+    mensagem.Envia();
 }
