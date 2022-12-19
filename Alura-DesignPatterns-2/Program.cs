@@ -7,9 +7,10 @@ using Alura_DesignPatterns_2.Atividade05;
 using Alura_DesignPatterns_2.Atividade06;
 using Alura_DesignPatterns_2.Atividade07;
 using Alura_DesignPatterns_2.Atividade08;
+using Alura_DesignPatterns_2.Atividade09;
 using System.Linq.Expressions;
 
-ExecutarAtividade(8);
+ExecutarAtividade(1);
 
 void ExecutarAtividade(int numAtividade)
 {
@@ -52,6 +53,11 @@ void ExecutarAtividade(int numAtividade)
         case 8:
             //Adapter
             Atividade08();
+            break;
+
+        case 9:
+            //Façade - Singleton (!)
+            Atividade09();
             break;
 
         default:
@@ -156,4 +162,13 @@ void Atividade08()
     var xml = new GeradorDeXml().GeraXml(cliente);
 
     Console.WriteLine(xml);
+}
+
+void Atividade09()
+{
+    EmpresaFacade facade = new EmpresaFacadeSingleton().Instancia;
+    //Cliente cliente = facade.BuscaCliente(cpf);
+
+    //var fatura = facade.CriaFatura(cliente, 5000);
+    //facade.GeraCobranca(tipo.Boleto, fatura);
 }
